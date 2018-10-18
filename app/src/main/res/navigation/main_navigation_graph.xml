@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/firstPageFragment">
+
+    <fragment
+        android:id="@+id/listOfAgenciesFragment"
+        android:label="fragment_list_of_agencies"
+        android:name="com.agency.ListOfAgenciesFragment"
+        tools:layout="@layout/fragment_list_of_agencies">
+        <action
+            android:id="@+id/action_listOfAgenciesFragment_to_filterFragment"
+            app:destination="@id/filterFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/submitHouse"
+        android:label="fragment_submit_house"
+        android:name="com.agency.SubmitHouse"
+        tools:layout="@layout/fragment_submit_house">
+        <action
+            android:id="@+id/action_submitHouse_to_filterFragment"
+            app:destination="@id/filterFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:label="fragment_search"
+        android:name="com.agency.SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_filterFragment"
+            app:destination="@id/filterFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:label="fragment_filter"
+        android:name="com.agency.FilterFragment"
+        tools:layout="@layout/fragment_filter"/>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:label="fragment_setting"
+        android:name="com.agency.SettingFragment"
+        tools:layout="@layout/fragment_setting"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:label="fragment_profile"
+        android:name="com.agency.ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/firstPageFragment"
+        android:label="FirstPageFragment"
+        android:name="com.agency.mainfragment.FirstPageFragment">
+        <action
+            android:id="@+id/action_firstPageFragment_to_searchFragment"
+            app:destination="@id/searchFragment"/>
+        <action
+            android:id="@+id/action_firstPageFragment_to_submitHouse"
+            app:destination="@id/submitHouse"/>
+        <action
+            android:id="@+id/action_firstPageFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+        <action
+            android:id="@+id/action_firstPageFragment_to_settingFragment"
+            app:destination="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_firstPageFragment_to_listOfAgenciesFragment"
+            app:destination="@id/listOfAgenciesFragment"/>
+    </fragment>
+
+</navigation>

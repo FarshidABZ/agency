@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="@dimen/size_24"
+        android:height="@dimen/size_24"
+        android:drawable="@drawable/circle_primary" />
+    <item
+        android:width="@dimen/size_16"
+        android:height="@dimen/size_16"
+        android:drawable="@drawable/ic_notifications_white"
+        android:gravity="center" />
+
+</layer-list>

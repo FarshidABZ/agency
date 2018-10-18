@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="96dp"
+    android:layout_height="108dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/size_72"
+        android:layout_height="@dimen/size_72"
+        android:background="@drawable/outline_circle_primary"
+        tools:ignore="UselessParent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mainPageItem_Image"
+            android:layout_width="@dimen/size_64"
+            android:layout_height="@dimen/size_64"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/size_12"
+            app:srcCompat="@drawable/ic_houses_colored" />
+
+    </RelativeLayout>
+
+    <com.agency.utils.customviews.XeiTextView
+        android:id="@+id/mainPageItem_text"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_4"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/register"
+        android:textColor="@color/primaryText"
+        android:textSize="12sp"
+        app:locale="fa_IR" />
+
+</LinearLayout>

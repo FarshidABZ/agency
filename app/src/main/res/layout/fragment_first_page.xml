@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBackEditProfile"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_margin="@dimen/size_8"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/size_8"
+                android:background="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/ic_menu_primary"/>
+
+            <com.agency.utils.customviews.XeiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgBackEditProfile"
+                android:text="@string/app_name"
+                android:textColor="@color/primaryText"
+                android:textSize="18sp"
+                app:locale="fa_IR"
+                app:style="bold"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_advList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_houses_colored"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_search"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_search"
+        app:text="@string/list_of_house"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16"
+        app:image="@drawable/search_house_color"
+        app:layout_constraintBottom_toTopOf="@+id/firstPageItem_5"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_advList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_agencies"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        app:text="@string/search"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_agencies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_agency"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_search"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_search"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_search"
+        app:text="@string/agencies"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_submitAdv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_rent"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_5"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_5"
+        app:text="@string/submit_adv"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_poster_colored"
+        app:layout_constraintBottom_toTopOf="@+id/firstPageItem_8"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_submitAdv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_6"
+        app:layout_constraintTop_toBottomOf="@+id/firstPageItem_search"
+        app:text="@string/app_name"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_poster_colored"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_5"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_5"
+        app:text="@string/search"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_poster_colored"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_8"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_8"
+        app:text="@string/search"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_poster_colored"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/firstPageItem_9"
+        app:layout_constraintTop_toBottomOf="@+id/firstPageItem_5"
+        app:text="@string/search"/>
+
+    <com.agency.utils.customviews.MainPageItemView
+        android:id="@+id/firstPageItem_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:image="@drawable/ic_poster_colored"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPageItem_8"
+        app:layout_constraintEnd_toStartOf="@+id/firstPageItem_8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstPageItem_8"
+        app:text="@string/search"/>
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:piv_animationType="worm"
+        app:piv_dynamicCount="true"
+        app:piv_interactiveAnimation="true"
+        app:piv_radius="4dp"
+        app:piv_count="0"
+        app:piv_selectedColor="@color/colorPrimary"
+        app:piv_unselectedColor="#FFD8D8D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/size_16"/>
+
+</android.support.constraint.ConstraintLayout>

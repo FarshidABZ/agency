@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">آژانس املاک …</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="enter_to_the_app">ورود به برنامه</string>
+    <string name="enter">ورود</string>
+    <string name="register">ثبت نام</string>
+    <string name="your_phone_number">شماره موبایل شما</string>
+    <string name="next_state">مرحله بعد</string>
+    <string name="insert_phone_number">شماره موبایل خود را وارد کنید.</string>
+    <string name="well_send_you_verification_code">ما برای شما یک کد تایید ارسال خواهیم کرد.</string>
+    <string name="confirm_number">تایید شماره</string>
+    <string name="time_to_get_verification_code">زمان انتظار برای دریافت کد تایید</string>
+    <string name="verification_code_sent_to">کد تایید به شماره %1$s ارسال شد.</string>
+    <string name="dont_get_verification_code">کد تایید را دریافت نکردم.</string>
+    <string name="we_will_call_you">دیگر با شما تماس می گیریم.</string>
+
+    <string name="what_is_your_name">اسم شما چیست ؟</string>
+    <string name="name">نام</string>
+    <string name="last_name">نام خانوادگی</string>
+    <string name="accept_parkbans_rules">با تمامی قوانین پارکبان موافقت می کنم.</string>
+    <string name="your_address">آدرس شما</string>
+    <string name="phone_number">شماره موبایل</string>
+
+    <string name="confirm">تایید</string>
+    <string name="cancel">انصراف</string>
+
+    <string name="notification">اطلاع رسانی</string>
+    <string name="call_to_support">تماس با پشتیبانی</string>
+    <string name="setting">تنظیمات</string>
+    <string name="notification_settings">تنظیمات اعلان ها</string>
+    <string name="rules">قوانین</string>
+    <string name="exit_from_app">خروج از برنامه</string>
+    <string name="exit_from_app_message">آیا از برنامه خارج می شوید؟</string>
+    <string name="edit_profile">ویرایش پروفایل</string>
+    <string name="insert_your_email">ایمیل خود را وارد کنید.</string>
+    <string name="change_number">تغییر شماره</string>
+    <string name="your_email">ایمیل شما</string>
+
+    <string name="yes">بله</string>
+    <string name="ok">باشه</string>
+
+    <string name="tooman">تومان</string>
+
+    <string name="ideal_amount">مبلغ دلخواه</string>
+    <string name="advance_search">جستجو پیشرفته</string>
+
+    <string name="search">جستجو</string>
+    <string name="profile">پروفایل</string>
+
+    <string name="submit_adv">ثبت آگهی</string>
+    <string name="list_of_house">لیست خانه‌ها</string>
+    <string name="agencies">مشاورین املاک</string>
+    <string name="aboutUs">درباره ما</string>
+    <string name="rateUs">امتیازدهی به برنامه</string>
+    <string name="shareApp">اشتراک گذاری برنامه</string>
+    <string name="home">خانه</string>
+
+</resources>

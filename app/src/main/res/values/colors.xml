@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFF5C5C</color>
+    <color name="colorPrimaryDark">#fa3939</color>
+    <color name="colorAccent">#FFFF5C5C</color>
+
+    <color name="error">#FFFF0000</color>
+
+    <color name="green">#40C256</color>
+
+    <color name="primaryText">#373737</color>
+    <color name="secondaryText">#767676</color>
+    <color name="disableText">#B3B3B3</color>
+    <color name="disableButton">#F3F3F3</color>
+
+    <color name="grayIcons">#FF8A949E</color>
+
+    <color name="divider">#E7E7E7</color>
+
+    <color name="place_holder">#DBDBDB</color>
+
+    <color name="background">#F0F0F0</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="nullBackground">@null</color>
+
+    <color name="iconsDisableColor">#8C959E</color>
+
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="disable_buttons">#F3F3F3</color>
+
+    <color name="selectorColor">#1F373737</color>
+    <color name="ripple">#1F373737</color>
+
+    <color name="selected_notification_color">#1AFF5C5C</color>
+
+</resources>

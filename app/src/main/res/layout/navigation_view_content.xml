@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cdlNavigationRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:fillViewport="true"
+
+        android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="144dp">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgUserAvatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/default_avatar"/>
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgEditProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/circle_white"
+                android:elevation="2dp"
+                android:padding="4dp"
+                app:layout_constraintLeft_toLeftOf="@+id/imgUserAvatar"
+                app:layout_constraintTop_toTopOf="@+id/imgUserAvatar"
+                app:srcCompat="@drawable/ic_edit_primary" tools:ignore="UnusedAttribute"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold"
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryText"
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/size_16"
+                app:layout_constraintStart_toEndOf="@+id/imgUserAvatar"
+                app:layout_constraintTop_toTopOf="@+id/imgUserAvatar"
+                android:text="فرشید اباذری"
+                app:layout_constraintBottom_toBottomOf="@+id/imgUserAvatar"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+    <LinearLayout
+            android:id="@+id/llIncreaseAmount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgWallet"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_houses_colored"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llRequestParking"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgRequestParking"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_agency"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+    <LinearLayout
+            android:id="@+id/llShareApp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgShareApp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_share_primary"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:text="@string/shareApp"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llRating"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgRating"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_rate_primary"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:text="@string/rateUs"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+    <LinearLayout
+            android:id="@+id/llAbout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/umgAbout"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_agency"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:text="@string/aboutUs"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llRules"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgRules"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_rule_primary"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:text="@string/rules"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+    <LinearLayout
+            android:id="@+id/llExit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/list_items_selector"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgExit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_power_primary"/>
+
+        <com.agency.utils.customviews.XeiTextView
+                app:locale="fa_IR"
+                app:style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_4"
+                android:layout_marginRight="@dimen/size_4"
+                android:text="@string/exit_from_app"
+                android:textColor="@color/primaryText"/>
+
+    </LinearLayout>
+
+</LinearLayout>
