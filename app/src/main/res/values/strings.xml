@@ -57,4 +57,18 @@
     <string name="shareApp">اشتراک گذاری برنامه</string>
     <string name="home">خانه</string>
 
+    <string name="name_and_family">نام و نام خانوادگی</string>
+    <string name="cell_phone_number">شماره موبایل</string>
+    <string name="rent">اجاره و رهن</string>
+    <string name="sale">فروش</string>
+    <string name="type">نوع</string>
+    <string name="house_type">نوع ملک</string>
+    <string name="residential">مسکونی</string>
+    <string name="official">اداری</string>
+    <string name="commercial">تجاری</string>
+    <string name="description">توضیحات</string>
+    <string name="location_">موقعیت مکانی</string>
+    <string name="adv_type">نوع آگهی</string>
+    <string name="advs">آگهی ها</string>
+
 </resources>

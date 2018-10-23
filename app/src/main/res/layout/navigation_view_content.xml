@@ -9,7 +9,6 @@
         android:background="@color/white"
         android:layoutDirection="rtl"
         android:fillViewport="true"
-
         android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout

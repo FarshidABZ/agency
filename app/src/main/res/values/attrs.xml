@@ -18,4 +18,9 @@
         <attr name="text" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="DrawableEditText">
+        <attr name="drawableEditTextImage" format="integer"/>
+        <attr name="drawableEditTextHint" format="string"/>
+    </declare-styleable>
+
 </resources>

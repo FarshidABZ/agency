@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layoutDirection="rtl"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/drawableEditText_image"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="@dimen/size_8"
+            app:srcCompat="@drawable/ic_phone_gray"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"/>
+
+    <com.agency.utils.customviews.XeiEditText
+            android:id="@+id/drawableEditText_editText"
+            tools:text="شسیشسی"
+            android:textAlignment="gravity"
+            android:gravity="start"
+            android:textColor="@color/primaryText"
+            android:textColorHint="@color/secondaryText"
+            android:layout_toEndOf="@+id/drawableEditText_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+</RelativeLayout>
