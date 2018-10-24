@@ -4,7 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="136dp"
+    android:layout_marginTop="@dimen/size_4"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="@dimen/size_8"
+    android:layout_marginEnd="8dp"
     android:layoutDirection="rtl">
 
     <android.support.constraint.ConstraintLayout
@@ -18,23 +22,62 @@
             android:layout_height="128dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginStart="@dimen/size_8"
             android:layout_marginEnd="8dp"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_image_gray"/>
 
         <com.agency.utils.customviews.XeiTextView
-            android:layout_width="wrap_content"
+            android:id="@+id/contentHouseTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_16"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:textColor="@color/primaryText"
-            android:textSize="18sp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/contentHousesImage"
             app:layout_constraintTop_toTopOf="@+id/contentHousesImage"
             app:locale="fa_IR"
             app:style="bold"
             tools:text="ویلایی دو خوابه ۱۲۵ متر"/>
+
+        <com.agency.utils.customviews.XeiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textAlignment="gravity"
+            android:textColor="@color/secondaryText"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/contentHousePrice"
+            app:layout_constraintStart_toEndOf="@+id/contentHousesImage"
+            app:layout_constraintTop_toBottomOf="@+id/contentHouseTitle"
+            app:layout_constraintVertical_bias="0.0"
+            app:locale="fa_IR"
+            tools:text="دو خوابه تازه ساخت با پارکینگ و انباری"/>
+
+        <com.agency.utils.customviews.XeiTextView
+            android:id="@+id/contentHousePrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/secondaryText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/contentHousesImage"
+            app:locale="fa_IR"
+            tools:text="۲۰۰۰۰۰۰۰ ریال"/>
 
     </android.support.constraint.ConstraintLayout>
 
