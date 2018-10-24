@@ -68,6 +68,12 @@
         <action
             android:id="@+id/action_firstPageFragment_to_listOfAgenciesFragment"
             app:destination="@id/listOfAgenciesFragment"/>
+        <action android:id="@+id/action_firstPageFragment_to_listOfHousesFragment"
+                app:destination="@id/listOfHousesFragment"/>
+    </fragment>
+    <fragment android:id="@+id/listOfHousesFragment" android:name="com.agency.houselist.ListOfHousesFragment"
+              android:label="fragment_list_of_houses" tools:layout="@layout/fragment_list_of_houses">
+        <action android:id="@+id/action_listOfHousesFragment_to_filterFragment" app:destination="@id/filterFragment"/>
     </fragment>
 
 </navigation>

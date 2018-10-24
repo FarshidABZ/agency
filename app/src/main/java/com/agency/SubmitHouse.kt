@@ -28,8 +28,11 @@ class SubmitHouse : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        imgBackSubmitAdv.setOnClickListener { mainView?.onBackButtonPressed() }
         return inflater.inflate(R.layout.fragment_submit_house, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        imgBackSubmitAdv.setOnClickListener { mainView?.onBackButtonPressed() }
     }
 }

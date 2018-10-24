@@ -2,6 +2,7 @@ package com.agency
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Gravity
 import androidx.navigation.Navigation.findNavController
 import com.agency.mainfragment.MainView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,9 +18,9 @@ class MainActivity : AppCompatActivity(), MainView {
         findNavController(this, R.id.mainActivity_navHostFragment).navigateUp()
 
     override fun openCloseNavigationBar() {
-        when (mainActivity_DrawerLayout.isShown) {
-            true -> mainActivity_DrawerLayout.closeDrawer(mainActivity_DrawerLayout)
-            false -> mainActivity_DrawerLayout.openDrawer(mainActivity_DrawerLayout)
+        when (mainActivity_DrawerLayout.isDrawerOpen(Gravity.START)) {
+            true -> mainActivity_DrawerLayout.closeDrawer(Gravity.START)
+            false -> mainActivity_DrawerLayout.openDrawer(Gravity.START)
         }
     }
 
