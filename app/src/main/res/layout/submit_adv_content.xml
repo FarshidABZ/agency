@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -24,16 +25,13 @@
             android:hint="@string/name_and_family"
             android:textColor="@color/primaryText"
             android:textColorHint="@color/secondaryText"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:textSize="13sp"/>
 
-    <com.agency.utils.customviews.XeiEditText
+    <com.agency.utils.customviews.XeiTextView
             android:id="@+id/submitAdv_editText_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:paddingStart="8dp"
@@ -46,20 +44,27 @@
             android:hint="@string/location_"
             android:textColor="@color/primaryText"
             android:textColorHint="@color/secondaryText"
-            android:textSize="13sp"
-            app:layout_constraintTop_toBottomOf="@id/submitAdv_editText_firstAndLastName"/>
+            android:textSize="13sp"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="2dp"
+          android:layout_marginEnd="18dp"
+          android:background="@color/iconsDisableColor"/>
 
     <com.agency.utils.customviews.XeiEditText
             android:id="@+id/submitAdv_editText_cellPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:singleLine="true"
             android:maxLines="1"
+            android:inputType="number"
             app:locale="fa_IR"
             android:drawablePadding="4dp"
             android:drawableStart="@drawable/ic_phone_gray"
@@ -73,7 +78,7 @@
             android:id="@+id/submitAdv_linear_advType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:orientation="vertical"
@@ -99,7 +104,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginTop="4dp"
-                android:background="#969696"/>
+                android:background="@color/iconsDisableColor"/>
 
     </LinearLayout>
 
@@ -107,26 +112,23 @@
             android:id="@+id/typeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             app:locale="fa_IR"
             app:style="bold"
             android:text="@string/type"
             android:textColor="@color/primaryText"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submitAdv_linear_advType"/>
+            android:textSize="16sp"/>
 
     <RadioGroup
             android:id="@+id/requestType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layoutDirection="rtl"
-            app:layout_constraintTop_toBottomOf="@+id/typeText">
+            android:layoutDirection="rtl">
 
         <android.support.v7.widget.AppCompatRadioButton
                 android:layout_width="match_parent"
@@ -150,21 +152,19 @@
             android:id="@+id/houseTypeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:text="@string/house_type"
             app:locale="fa_IR"
             app:style="bold"
             android:textColor="@color/primaryText"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/requestType"/>
+            android:textSize="16sp"/>
 
     <RadioGroup
             android:id="@+id/houseTypeRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layoutDirection="rtl"
@@ -204,13 +204,12 @@
             android:layout_marginStart="16dp"
             android:text="@string/description"
             android:textColor="@color/primaryText"
-            android:textSize="14sp"
+            android:textSize="16sp"
             app:locale="fa_IR"
-            app:style="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/houseTypeRadioGroup"/>
+            app:style="bold"/>
 
     <com.agency.utils.customviews.XeiEditText
+            android:id="@+id/submitAdv_editText_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -226,10 +225,6 @@
             android:gravity="top"
             android:hint="@string/description"
             android:minHeight="128dp"
-            android:textColorHint="@color/secondaryText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionText"/>
+            android:textColorHint="@color/secondaryText"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

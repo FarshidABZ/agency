@@ -10,25 +10,19 @@
         android:label="fragment_list_of_agencies"
         android:name="com.agency.ListOfAgenciesFragment"
         tools:layout="@layout/fragment_list_of_agencies">
-        <action
-            android:id="@+id/action_listOfAgenciesFragment_to_filterFragment"
-            app:destination="@id/filterFragment"/>
     </fragment>
 
     <fragment
         android:id="@+id/submitHouse"
         android:label="fragment_submit_house"
-        android:name="com.agency.SubmitHouse"
+        android:name="com.agency.submit.SubmitHouse"
         tools:layout="@layout/fragment_submit_house">
-        <action
-            android:id="@+id/action_submitHouse_to_filterFragment"
-            app:destination="@id/filterFragment"/>
     </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
         android:label="fragment_search"
-        android:name="com.agency.SearchFragment"
+        android:name="com.agency.search.SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_filterFragment"
@@ -39,8 +33,12 @@
     <fragment
         android:id="@+id/filterFragment"
         android:label="fragment_filter"
-        android:name="com.agency.FilterFragment"
-        tools:layout="@layout/fragment_filter"/>
+        android:name="com.agency.filter.FilterFragment"
+        tools:layout="@layout/fragment_filter">
+        <action android:id="@+id/action_filterFragment_to_listOfHousesFragment"
+                app:destination="@id/listOfHousesFragment"/>
+        <action android:id="@+id/action_filterFragment_to_searchFragment" app:destination="@id/searchFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/settingFragment"
         android:label="fragment_setting"

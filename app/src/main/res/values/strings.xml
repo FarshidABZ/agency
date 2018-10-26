@@ -70,5 +70,7 @@
     <string name="location_">موقعیت مکانی</string>
     <string name="adv_type">نوع آگهی</string>
     <string name="advs">آگهی ها</string>
+    <string name="price">قیمت</string>
+    <string name="price_">قیمت: </string>
 
 </resources>

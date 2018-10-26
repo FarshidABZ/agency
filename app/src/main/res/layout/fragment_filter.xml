@@ -1,14 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".FilterFragment">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".filter.FilterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/advance_search"/>
+            android:layout_height="56dp"
+            android:background="@color/white">
 
-</FrameLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/listOfHousesBackButton"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_margin="@dimen/size_8"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size_8"
+                    android:background="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_arrow_forward_primary"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/listOfHousesFilterButton"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_margin="@dimen/size_8"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size_8"
+                    android:background="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_filter_primary"/>
+
+            <com.agency.utils.customviews.XeiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/listOfHousesBackButton"
+                    android:text="@string/list_of_house"
+                    android:textColor="@color/primaryText"
+                    android:textSize="18sp"
+                    app:locale="fa_IR"
+                    app:style="bold"
+                    tools:ignore="RelativeOverlap"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.agency.utils.customviews.XeiEditText
+                    android:id="@+id/submitAdv_editText_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="8dp"
+                    app:locale="fa_IR"
+                    android:paddingEnd="8dp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/location_pin_gray"
+                    android:hint="@string/location_"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/submitAdv_editText_firstAndLastName"/>
+
+            <LinearLayout
+                    android:id="@+id/submitAdv_linear_advType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/submitAdv_editText_cellPhone">
+
+                <com.agency.utils.customviews.XeiTextView
+                        android:id="@+id/submitAdv_editText_advType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        app:locale="fa_IR"
+                        android:hint="@string/adv_type"
+                        android:textColor="@color/primaryText"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="13sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="4dp"
+                        android:background="#969696"/>
+
+            </LinearLayout>
+
+            <com.agency.utils.customviews.XeiTextView
+                    android:id="@+id/typeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:locale="fa_IR"
+                    app:style="bold"
+                    android:text="@string/type"
+                    android:textColor="@color/primaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/submitAdv_linear_advType"/>
+
+            <RadioGroup
+                    android:id="@+id/requestType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintTop_toBottomOf="@+id/typeText">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransansmobile"
+                        android:text="@string/rent"
+                        android:textColor="@color/primaryText"
+                        android:textSize="12sp"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransansmobile"
+                        android:text="@string/sale"
+                        android:textColor="@color/primaryText"
+                        android:textSize="12sp"/>
+
+            </RadioGroup>
+
+            <com.agency.utils.customviews.XeiTextView
+                    android:id="@+id/houseTypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/house_type"
+                    app:locale="fa_IR"
+                    app:style="bold"
+                    android:textColor="@color/primaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/requestType"/>
+
+            <RadioGroup
+                    android:id="@+id/houseTypeRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintTop_toBottomOf="@+id/houseTypeText">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransansmobile"
+                        android:text="@string/residential"
+                        android:textColor="@color/primaryText"
+                        android:textSize="12sp"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransansmobile"
+                        android:text="@string/official"
+                        android:textColor="@color/primaryText"
+                        android:textSize="12sp"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransansmobile"
+                        android:text="@string/commercial"
+                        android:textColor="@color/primaryText"
+                        android:textSize="12sp"/>
+
+            </RadioGroup>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/size_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.agency.utils.customviews.XeiTextView
+                        android:id="@+id/priceText"
+                        android:layout_width="wrap_content"
+                        android:text="@string/price_"
+                        android:textSize="14sp"
+                        app:locale="fa_IR"
+                        app:style="bold"
+                        android:textColor="@color/primaryText"
+                        android:layout_marginStart="@dimen/size_16"
+                        android:layout_height="wrap_content"/>
+
+                <com.agency.utils.customviews.XeiTextView
+                        android:id="@+id/filterFragmentPriceRangeText"
+                        android:layout_toEndOf="@+id/priceText"
+                        android:layout_width="wrap_content"
+                        tools:text="10000 - 2000000"
+                        android:textSize="14sp"
+                        app:locale="fa_IR"
+                        app:style="bold"
+                        android:textColor="@color/primaryText"
+                        android:layout_marginStart="@dimen/size_8"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <io.apptik.widget.MultiSlider
+                    android:id="@+id/filterFragmentPriceMultiSlider"
+                    app:thumbNumber="2"
+                    app:stepsThumbsApart="100"
+                    app:drawThumbsApart="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/size_24"
+                    android:layout_marginEnd="@dimen/size_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/size_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.agency.utils.customviews.XeiTextView
+                        android:id="@+id/filterFragmentAreaText"
+                        android:layout_width="wrap_content"
+                        android:text="@string/price_"
+                        android:textSize="14sp"
+                        app:locale="fa_IR"
+                        app:style="bold"
+                        android:textColor="@color/primaryText"
+                        android:layout_marginStart="@dimen/size_16"
+                        android:layout_height="wrap_content"/>
+
+                <com.agency.utils.customviews.XeiTextView
+                        android:id="@+id/filterFragmentAreaTextRange"
+                        android:layout_toEndOf="@+id/filterFragmentAreaText"
+                        android:layout_width="wrap_content"
+                        tools:text="10000 - 2000000"
+                        android:textSize="14sp"
+                        app:locale="fa_IR"
+                        app:style="bold"
+                        android:textColor="@color/primaryText"
+                        android:layout_marginStart="@dimen/size_8"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <io.apptik.widget.MultiSlider
+                    android:id="@+id/filterFragmentAreaMultiSlider"
+                    app:thumbNumber="2"
+                    app:stepsThumbsApart="100"
+                    app:drawThumbsApart="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/size_24"
+                    android:layout_marginEnd="@dimen/size_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_24"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

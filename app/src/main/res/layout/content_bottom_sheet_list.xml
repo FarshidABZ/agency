@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.agency.utils.customviews.XeiTextView
+        android:id="@+id/contentBottomSheetListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:paddingStart="@dimen/size_16"
+        android:paddingEnd="@dimen/size_16"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"
+        app:locale="fa_IR"
+        app:style="bold"
+        tools:text="sdfsdfsdf" />
+
+    <com.agency.utils.customviews.XeiTextView
+        android:id="@+id/contentBottomSheetListDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/secondaryText"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:paddingStart="@dimen/size_16"
+        android:paddingEnd="@dimen/size_16"
+        app:locale="fa_IR"
+        app:style="bold"
+        android:layout_marginBottom="@dimen/size_4"
+        tools:text="شسی سیب سیب" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+</LinearLayout>
